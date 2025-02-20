@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspen's Adventure Gallery</title>
+</head>
 
 <body>
     <div id='header'>
@@ -15,8 +20,10 @@
                 <img src="assets/Aspen1.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
 
+
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    mainDisplayImageHTML.src = "assets/Aspen1.jpg";
 
                     '>View</button>
             </div>
@@ -24,7 +31,9 @@
                 <img src="assets/Aspen2.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                  
+                  let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                  mainDisplayImageHTML.src = "assets/Aspen2.jpg";
 
 
                     '>View</button>
@@ -33,7 +42,8 @@
                 <img src="assets/Aspen3.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                     let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                     mainDisplayImageHTML.src = "assets/Aspen3.jpg";
 
 
                     '>View</button>
@@ -42,7 +52,8 @@
                 <img src="assets/Aspen4.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                     let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                     mainDisplayImageHTML.src = "assets/Aspen4.jpg";
 
 
                     '>View</button>
@@ -51,7 +62,8 @@
                 <img src="assets/Aspen5.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                    let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                    mainDisplayImageHTML.src = "assets/Aspen5.jpg";
 
 
                     '>View</button>
@@ -60,7 +72,8 @@
                 <img src="assets/Aspen6.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                     let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                     mainDisplayImageHTML.src = "assets/Aspen6.jpg";
 
 
                     '>View</button>
@@ -69,7 +82,8 @@
                 <img src="assets/Aspen7.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                     let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                     mainDisplayImageHTML.src = "assets/Aspen7.jpg";
 
 
                     '>View</button>
@@ -78,7 +92,8 @@
                 <img src="assets/Aspen8.jpg" class="thumbnailImage">
                 <button
                     onclick='
-                    //*** YOUR JAVASCRIPT CODE HERE ***
+                   let mainDisplayImageHTML = document.getElementById("mainDisplayImage");
+                   mainDisplayImageHTML.src = "assets/Aspen8.jpg";
 
                     
                     '>View</button>
@@ -114,10 +129,11 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        /* margin-top: 5%; */
+        margin-top: 5%;
+        
     }
     .thumbnail {
-        position: relative; /* Set position context for absolute positioning of the button */
+        position: relative; 
         margin: 5px;
         display: flex;
         flex-direction: column;
@@ -128,13 +144,19 @@
     .thumbnail img {
         margin: 0;
         width: 10vh;
-        object-fit: cover; /* This will make sure to cover the area without stretching the image */
+        object-fit: cover; 
     }
     .thumbnail button {
-        position: absolute; /* Position the button over the image */
+        position: absolute; 
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Center the button */
+        transform: translate(-50%, -50%); 
+        opacity: 0;
     }
+
+    .thumbnail:hover button {
+        opacity: 1;
+    }
+   
 </style>
 </html>
